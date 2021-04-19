@@ -122,6 +122,11 @@ declare namespace rateLimit {
         skipSuccessfulRequests?: boolean;
 
         /**
+         * When set, requests finished with status code from the list won't be counted. Defaults to `[]` (empty list).
+         */
+        skipStatusCodes?: number[];
+
+        /**
          * HTTP status code returned when `max` is exceeded. Defaults to `429`.
          */
         statusCode?: number;
