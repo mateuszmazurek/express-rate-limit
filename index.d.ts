@@ -69,6 +69,11 @@ declare namespace rateLimit {
         headers?: boolean;
 
         /**
+         * Prefix for headers described above (excluding `Retry-After`). Defaults to `X-RateLimit`.
+         */
+        headersPrefix?: string;
+
+        /**
          * Enable headers conforming to the [ratelimit standardization proposal](https://tools.ietf.org/id/draft-polli-ratelimit-headers-01.html):
          * `RateLimit-Limit`, `RateLimit-Remaining`, and, if the store supports it, `RateLimit-Reset`. May be used in conjunction with, or instead of the `headers` option.
          * Behavior and name will likely change in future releases.
